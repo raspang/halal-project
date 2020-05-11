@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="company" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e66ac101-ed70-45f7-a3d9-5b3af8d2feb7">
+	<parameter name="myImage" class="Object" isForPrompting="false">
+		<parameterDescription><![CDATA[The letterhead image]]></parameterDescription>
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dost" class="java.lang.Object"/>
+	<parameter name="halal" class="java.lang.Object"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="companyfield" class="java.lang.String"/>
+	<field name="companyfieldvalue" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<staticText>
+				<reportElement x="140" y="3" width="280" height="17" uuid="dcc54423-a56e-449f-a0af-afead6177c93"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="20" width="280" height="18" uuid="0c699e67-f94a-49dc-aaeb-6665e186ded7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT OF SCIENCE AND TECHNOLOGY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="38" width="280" height="20" uuid="98926d06-5b5d-422a-ba33-dfb16ef54dd0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Regional Office No. XII]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="76" width="553" height="23" uuid="261e6093-c46c-471a-9bcf-93640fd80888"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOST XII CERTIFICATE OF HALAL QUALITY ASSURANCE APPLICATION FORM]]></text>
+			</staticText>
+			<image>
+				<reportElement x="70" y="0" width="70" height="61" uuid="32aae085-708c-40ce-91f3-5e75d93bef78"/>
+				<imageExpression><![CDATA[$P{dost}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="418" y="3" width="80" height="67" uuid="c8ce979d-9c4c-4cea-a79e-f4a870156e52"/>
+				<imageExpression><![CDATA[$P{halal}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="0" width="553" height="34" uuid="ad958c13-3d93-4a58-94c1-fe7ad0d5095b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="553b706d-0871-4b09-a7fc-fa5bb8520b9b"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPANY PROFILE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="37" splitType="Stretch">
+			<textField>
+				<reportElement x="10" y="0" width="147" height="37" uuid="268a059d-55dc-4d45-9f6f-c29d0ea64ac5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="553b706d-0871-4b09-a7fc-fa5bb8520b9b"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyfield}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="157" y="0" width="398" height="37" uuid="0fd68543-d548-45b7-944b-018cc7eb5b8e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8acac9ed-f985-4912-b36d-a531f4f267a4"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":  "+ $F{companyfieldvalue}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="67" splitType="Stretch">
+			<textField>
+				<reportElement x="230" y="45" width="100" height="20" uuid="0fd1d95c-f0d6-4d2d-b671-58327f6a644e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="10" y="0" width="270" height="45" uuid="de93d2f3-f502-498e-9171-27c731a356f6"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Century Gothic" size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[DOST 12 Bldg., Regional Government Center
+Cotabato City
+Philippines 9600]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="275" height="45" uuid="764ba336-8093-4b52-8ad7-d4608c46d671"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Century Gothic" size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Tel. No.: +63 64 421-6908
+Fax No.:+63 64 421-2711
+Email: zhrlaidan.r12@dost.gov.ph
+Website: region12.dost.gov.ph]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

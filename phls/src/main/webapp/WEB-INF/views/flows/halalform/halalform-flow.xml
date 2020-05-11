@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow
+                          http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+	
+	<var name="onsite" class="com.dost12.phls.phlsbackend.dto.OnsiteAddress"/>
+	<var name="supplier" class="com.dost12.phls.phlsbackend.dto.Supplier"/>
+	
+	<on-start>
+		<evaluate expression="halalRegisterHandler.init()" result="flowScope.halalRegisterModel"/>
+	</on-start>
+
+
+	
+	<!-- view the signup-personal page-->
+	<view-state id="supplier" view="flows/halalform/supplier" model="supplier">
+		<transition on="onsite" to="validateHalal"/>
+		<on-exit>
+			<evaluate expression="halalRegisterHandler.addSupplier(flowScope.halalRegisterModel, supplier)" />			
+		</on-exit>		
+	</view-state>
+
+	<!-- validate signup-personal page-->
+	<action-state id="validateHalal">
+		<evaluate expression="halalRegisterHandler.validateSupplier(supplier,messageContext)" />
+		<transition on="success" to="onsite"/>
+		<transition on="failure" to="supplier"/>
+	</action-state>
+
+	<view-state id="onsite" view="flows/halalform/address" model="onsite">
+		<transition on="confirm" to="confirm"/>
+		<transition on="supplier" to="supplier"/>
+		<on-exit>
+			<evaluate expression="halalRegisterHandler.addAddress(flowScope.halalRegisterModel, onsite)" />			
+		</on-exit>		
+	</view-state>
+
+
+	<view-state id="confirm" view="flows/halalform/confirm" model="flowScope.halalRegisterModel">		
+		<transition on="submit" to="submit" />
+		<transition on="onsite" to="onsite" />
+		<transition on="supplier" to="supplier" />
+	</view-state>
+
+	<action-state id="submit">
+		<evaluate expression="halalRegisterHandler.saveAll(flowScope.halalRegisterModel)" />
+		<transition on="success" to="success"/>
+	</action-state>
+	
+	<!-- end state -->
+	<end-state  id="success" view="flows/halalform/success" />
+	<end-state id="home" view="externalRedirect:contextRelative:/" />
+
+	<!-- global transition -->
+	<global-transitions>
+		<transition on="home" to="home" validate="false" />
+	</global-transitions>
+	
+</flow>

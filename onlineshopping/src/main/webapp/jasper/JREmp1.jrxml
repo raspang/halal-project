@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StockReport" pageWidth="500" pageHeight="600" columnWidth="450" leftMargin="5" rightMargin="5" topMargin="10" bottomMargin="1" uuid="aa399346-dea3-4a66-a0e6-16becd6ffb81">
+	<style name="Arial" isDefault="true" fontName="Arial" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+	<parameter name="Title" class="java.lang.String"/>
+	<parameter name="noy" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[select Emp_code, EmpName,  Salary, Doj from emp_master where TIMESTAMPDIFF(YEAR, Doj, CURDATE())>=$P{noy}]]>
+	</queryString>
+	<field name="Emp_code" class="java.lang.String"/>
+	<field name="EmpName" class="java.lang.String"/>
+	<field name="Salary" class="java.lang.Integer"/>
+	<field name="Doj" class="java.lang.String"/>
+	<title>
+		<band height="50" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement style="Arial" x="0" y="5" width="490" height="30" uuid="af8caeee-4c33-47b9-b1c7-d456e07b51cc"/>
+				<textElement textAlignment="Center">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Title}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Arial" mode="Opaque" x="0" y="5" width="490" height="15" forecolor="#FFFFFF" backcolor="#777765" uuid="e37cc2da-b540-4455-b456-289bb95ea51b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Employees  who are working more than  " + String.valueOf($P{noy})+" Years"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement style="Arial" mode="Opaque" x="0" y="4" width="100" height="15" backcolor="#CBB453" uuid="a3c031ed-edab-4103-879f-bc120b96221b"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[
+			Employee Code
+		]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Arial" positionType="Float" mode="Opaque" x="100" y="4" width="170" height="15" backcolor="#CBB453" uuid="e4a3f28c-9242-4d84-97d9-4a157c861167"/>
+				<text><![CDATA[
+			Employee Name
+		]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Arial" positionType="Float" mode="Opaque" x="270" y="4" width="100" height="15" backcolor="#CBB453" uuid="38e501a7-bb44-4351-a65e-be06b257edb1"/>
+				<text><![CDATA[
+			Salary
+		]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Arial" positionType="Float" mode="Opaque" x="370" y="4" width="120" height="15" backcolor="#CBB453" uuid="faabde73-acfd-4760-9fad-cef9d63878d7"/>
+				<text><![CDATA[
+			Date of Joining
+		]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="4" width="100" height="15" uuid="3925042f-4675-4122-aa16-ee2441890bd4"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{Emp_code}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="100" y="4" width="170" height="15" uuid="c56112df-5466-42d8-96d7-167f05d76c94"/>
+				<textFieldExpression><![CDATA[$F{EmpName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="270" y="4" width="100" height="15" uuid="5cad04f6-95a1-4e2e-9856-5e103d6e78a0"/>
+				<textFieldExpression><![CDATA[$F{Salary}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="370" y="4" width="100" height="15" uuid="57628eb0-d2b4-4504-b9b7-444e99c62bf0"/>
+				<textFieldExpression><![CDATA[$F{Doj}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="200" y="20" width="85" height="15" uuid="536d25ad-f1c7-4c35-b366-834919d5ac11"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + String.valueOf($V{PAGE_NUMBER})]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="285" y="20" width="75" height="15" uuid="0301d9d4-4fbe-4412-b648-e5232c7301c8"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + String.valueOf($V{PAGE_NUMBER})]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="35" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement style="Arial" x="175" y="20" width="165" height="15" uuid="e6d4298f-ba14-4860-93b0-eb49a6164f77"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Total Number of Employees " + String.valueOf($V{REPORT_COUNT})]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

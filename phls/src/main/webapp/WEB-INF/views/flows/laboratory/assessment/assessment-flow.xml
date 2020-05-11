@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow
+                          http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+	
+
+	<var name="product"    		 class="com.dost12.phls.phlsbackend.dto.Product"/>
+	<var name="ingredientDetail" class="com.dost12.phls.phlsbackend.dto.IngredientDetail"/>
+	<var name="ingredient" 		 class="com.dost12.phls.phlsbackend.dto.Ingredient"/>
+	<on-start>
+		<evaluate expression="productHandler.init()" result="flowScope.productModel"/>
+	</on-start>
+
+
+	<view-state id="product" view="flows/laboratory/lab-product/lab-product" model="product">
+		<on-entry>
+			<evaluate expression="productHandler.getCategories()" result="viewScope.categories"/>											 
+		</on-entry>
+		<transition on="ingredient" to="validate" />
+		<on-exit>
+			<evaluate expression="productHandler.addProduct(flowScope.productModel, product)" />
+		</on-exit>
+	</view-state>
+
+
+	<action-state id="validate">
+		<evaluate expression="productHandler.validationProduct(product, messageContext)" />
+		<transition on="success" to="ingredient"/>
+		<transition on="failure" to="product"/>
+	</action-state>
+	
+									  
+	<view-state id="ingredient" view="flows/laboratory/lab-product/lab-ingredient" model="flowScope.productModel">		
+		<on-entry>
+			<evaluate expression="productHandler.getIngredientsDetails(flowScope.productModel)" result="flowScope.ingredientDetails"/>											 
+		</on-entry>
+		<transition on="confirm" 	      to="confirm" />
+		<transition on="product" 		  to="product" />
+		<transition on="ingredientDetail" to="ingredientDetail" />	
+	</view-state>
+	
+	<view-state id="ingredientDetail" view="flows/laboratory/lab-product/lab-ingredient-detail" model="ingredientDetail">
+		<on-entry>
+			<evaluate expression="productHandler.getIngredients()" result="flowScope.ingredients"/>			
+			<evaluate expression="productHandler.getProducts()"    result="flowScope.products"/>							 
+		</on-entry>	
+		
+		<transition on="ingredient" to="ingredient" />
+		<on-exit>
+			<evaluate expression="productHandler.addIngredientProduct(flowScope.productModel, ingredientDetail)" />
+		</on-exit>		
+	</view-state>
+	
+	
+	<!-- view the signup-confirm page -->	
+	<view-state id="confirm" view="flows/laboratory/lab-product/lab-confirm" model="flowScope.productModel">
+		<transition on="submit" to="submit" />
+		<transition on="ingredient" to="ingredient" />
+		<transition on="product" to="product" />	
+	</view-state>
+	
+	<!-- handle the submit action -->
+	<action-state id="submit">
+		<evaluate expression="productHandler.saveAll(flowScope.productModel)" />
+		<transition on="success" to="success"/>
+	</action-state>
+	
+	<!-- end state -->
+	<end-state  id="success" view="flows/laboratory/lab-product/lab-success" />
+	<end-state  id="laboratory" view="externalRedirect:contextRelative:/" />
+
+	<!-- global transition -->
+	<global-transitions>
+		<transition on="home" to="home" validate="false" />
+	</global-transitions>
+	
+</flow>

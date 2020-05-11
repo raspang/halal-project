@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="halalform" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="585c76c9-bf46-476e-b5f0-d34d8d1447b9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="dost" class="java.lang.Object"/>
+	<parameter name="halal" class="java.lang.Object"/>
+	<parameter name="directorName" class="java.lang.String"/>
+	<parameter name="directorTittle" class="java.lang.String"/>
+	<parameter name="labmanagerName" class="java.lang.String"/>
+	<parameter name="labmanagerTittle" class="java.lang.String"/>
+	<parameter name="analystName" class="java.lang.String"/>
+	<parameter name="analystTittle" class="java.lang.String"/>
+	<parameter name="calories" class="java.lang.String"/>
+	<parameter name="caloriesfat" class="java.lang.String"/>
+	<parameter name="totalfat" class="java.lang.String"/>
+	<parameter name="totalfatdailyvalues" class="java.lang.String"/>
+	<parameter name="sodium" class="java.lang.String"/>
+	<parameter name="sodiumdailyvalues" class="java.lang.String"/>
+	<parameter name="totalcarbohydrates" class="java.lang.String"/>
+	<parameter name="totalcarbohydratesdailyvalues" class="java.lang.String"/>
+	<parameter name="protein" class="java.lang.String"/>
+	<parameter name="sugar" class="java.lang.String"/>
+	<parameter name="vitaminc" class="java.lang.String"/>
+	<parameter name="vitamincdailyvalues" class="java.lang.String"/>
+	<parameter name="productname" class="java.lang.String"/>
+	<parameter name="referenceno" class="java.lang.String"/>
+	<parameter name="dateofevaluation" class="java.lang.String"/>
+	<parameter name="nameofcompany" class="java.lang.String"/>
+	<parameter name="address" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="laboratoryNo" class="java.lang.String"/>
+	<field name="dateSubmitted" class="java.lang.String"/>
+	<field name="dateAnalyzed" class="java.lang.String"/>
+	<field name="dateReported" class="java.lang.String"/>
+	<field name="sampleSubmittedBy" class="java.lang.String"/>
+	<field name="nameOfCompany" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="sampleCode" class="java.lang.String"/>
+	<field name="sampleDescription" class="java.lang.String"/>
+	<field name="testMethod" class="java.lang.String"/>
+	<field name="parameter" class="java.lang.String"/>
+	<field name="result" class="java.lang.String"/>
+	<field name="unit" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="244" splitType="Stretch">
+			<textField>
+				<reportElement x="140" y="120" width="418" height="20" uuid="48e3b9a6-8a1a-4939-93d2-21fceee36d2f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{referenceno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="140" width="418" height="20" uuid="2a4e58f9-3ad6-4f56-a554-cc22be23e216"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":  "+$P{dateofevaluation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="181" width="418" height="20" uuid="f31b71ca-b946-41b6-92ea-d1ca6dd9027b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":  "+$P{nameofcompany}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="201" width="418" height="19" uuid="b5581893-1f27-4e31-b715-871e1aec1bf1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":  "+$P{address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="80" width="558" height="30" uuid="042114dd-10c6-4b32-8407-632c380666fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NUTRITION FACTS LABEL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="120" width="130" height="20" uuid="c077e51c-9255-4867-ad80-d9f49a889ddb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Reference No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="140" width="130" height="20" uuid="129504f6-0149-40e9-9cd9-6246b47a5664"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Date of Evaluation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="160" width="130" height="20" uuid="d02242ae-f06c-4917-b608-3d3c9886c036"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="181" width="130" height="20" uuid="c6f8a1b1-ce51-4b4a-849b-1f67b2de78d5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Name of Company	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="201" width="130" height="19" uuid="7d578478-2864-44b0-ba17-b865b91bf04d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="220" width="130" height="19" uuid="c5ee6858-52f4-4a4a-9a73-483fe641d151"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Page]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="220" width="418" height="19" uuid="f2482497-e23e-45ba-b8c8-ff02d9b8a651"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":  "+$V{PAGE_NUMBER}+" of "+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="130" y="0" width="300" height="20" uuid="95a96b77-63bd-4043-aaa1-b6a05917d06f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="20" width="300" height="20" uuid="1e207e20-d1ed-49b9-a042-18a9d84466b9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT OF SCIENCE AND TECHNOLOGY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="40" width="300" height="20" uuid="5ff6fc23-9096-4a6e-ae19-ce022444027f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Regional Office No. XII, Cotabato City]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="60" width="400" height="20" uuid="c5f9adf9-0775-4cc5-bde1-c1c143ac08e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REGIONAL STANDARDS AND TESTING LABORATORIES]]></text>
+			</staticText>
+			<image>
+				<reportElement x="70" y="0" width="50" height="50" uuid="7d7fe79e-3eb5-4f72-8103-e526f7f1f45b"/>
+				<imageExpression><![CDATA[$P{dost}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="420" y="0" width="70" height="70" uuid="f12e827d-aafd-41cf-b6d4-8f2338c949e9"/>
+				<imageExpression><![CDATA[$P{halal}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="140" y="161" width="418" height="20" uuid="edc4944a-a64b-448a-aa55-1748895bca29"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":  "+$P{productname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="258" splitType="Stretch">
+			<rectangle>
+				<reportElement x="100" y="10" width="340" height="240" uuid="e32f7472-3ae8-42fd-a4af-6f8ed485ccf9"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="102" y="12" width="338" height="30" uuid="b372cd4a-c485-4af2-b755-a2f69af82cd9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NUTRITIONAL FACTS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="42" width="338" height="18" uuid="5ef35d92-609a-4da9-9fec-01cdfd767099"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="8"/>
+				</textElement>
+				<text><![CDATA[Serving Size 350 mL (about 1 bottle.)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="64" width="338" height="20" uuid="28df3f22-21bc-4374-a4ae-dd9a9f882027"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount per Serving]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="102" y="85" width="58" height="22" uuid="a7684d42-9476-493b-ac75-00a0b825b74a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Calories: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="84" width="90" height="23" uuid="d333bd8e-3b1d-47e7-a128-47d0f7856bab"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Calories from Fat:]]></text>
+			</staticText>
+			<line direction="BottomUp">
+				<reportElement positionType="FixRelativeToBottom" x="100" y="61" width="340" height="1" uuid="2f0d0b55-e863-4cd7-93be-9c6e542e1790"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement positionType="FixRelativeToBottom" x="101" y="61" width="340" height="1" uuid="6b16ef0a-8c75-4b74-b338-abefcfa02d0d"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="160" y="85" width="100" height="22" uuid="daad5a9b-9698-44a8-abe0-361e5cc64fe8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{calories}]]></textFieldExpression>
+			</textField>
+			<line direction="BottomUp">
+				<reportElement positionType="FixRelativeToBottom" x="102" y="91" width="338" height="1" uuid="ca06d075-85d6-4381-a93a-3ec239747a79"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="350" y="85" width="90" height="22" uuid="7e4abf88-94ac-4f0a-825b-baf6befe9762"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{caloriesfat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="300" y="107" width="140" height="16" uuid="0b07bc0a-2511-45fc-a8ef-5607df29197d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[% Daily Values*]]></text>
+			</staticText>
+			<line direction="BottomUp">
+				<reportElement positionType="FixRelativeToBottom" x="100" y="130" width="340" height="1" uuid="430dc504-2a2f-4707-952e-b185255d3bb0"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="102" y="124" width="48" height="19" uuid="b42d1ed9-7c03-432e-8eb8-abd9e0806ce3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Fat:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="150" y="126" width="147" height="16" uuid="1ea5c789-6c25-4ad2-b4fe-d12ff8dd6fb7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalfat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="126" width="140" height="17" uuid="71019692-3c84-47be-9b52-a750f369cac7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalfatdailyvalues}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="103" y="147" width="47" height="19" uuid="7c040761-24e0-4828-b8ee-76479c7254e0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sodium:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="150" y="149" width="146" height="16" uuid="cd2cd17c-8e93-4fb1-9e28-39bfdbfd9d15"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sodium}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="142" width="141" height="17" uuid="a8f6be97-8ad9-4158-a87b-6f9f4041ede9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sodiumdailyvalues}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="103" y="159" width="107" height="15" uuid="875549e2-d017-4cda-ad0e-e510eb2ff8fe"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Carbohydrates:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="210" y="164" width="86" height="16" uuid="1dffa71f-1da4-44ba-a215-7fb74640bafd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalcarbohydrates}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="157" width="141" height="17" uuid="0ce55135-37ac-48f1-ab30-cacc76bc82a7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalcarbohydratesdailyvalues}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="103" y="174" width="47" height="15" uuid="c0bf023a-8428-47cb-91b6-fbec1a517dea"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Protein:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="189" width="40" height="13" uuid="7aa77ea1-f637-42b6-84da-a094db23359a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sugar:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="203" width="57" height="15" uuid="79377a25-4377-4b34-8822-8739f867a3ee"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vitamin C:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="150" y="174" width="100" height="15" uuid="54ba4350-04e6-4bb7-8ccd-88aab738e4ed"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{protein}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="189" width="114" height="13" uuid="3ad1fdbe-70cc-4478-8bc5-acf7e303ff74"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sugar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="204" width="136" height="15" uuid="9948a9f1-2600-4f6d-a675-d5ebb362ee9a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{vitaminc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="296" y="203" width="144" height="16" uuid="64e115fe-16f7-4f5a-a783-232b3ac43127"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{vitamincdailyvalues}]]></textFieldExpression>
+			</textField>
+			<line direction="BottomUp">
+				<reportElement positionType="FixRelativeToBottom" x="100" y="226" width="340" height="1" uuid="49fb3428-29c2-4880-9561-943cd5fdc79a"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="103" y="227" width="337" height="23" uuid="745769f9-33f1-4f4b-9afc-75c01cd79dc7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[* Percent Daily Values are based on a 2,000 calories diet.]]></text>
+			</staticText>
+			<line direction="BottomUp">
+				<reportElement positionType="FixRelativeToBottom" x="101" y="113" width="340" height="1" uuid="dd932dbe-ba3e-4af8-80fc-b4508b4de86f"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement positionType="FixRelativeToBottom" x="102" y="142" width="337" height="1" uuid="0e410f40-6d98-48fe-936a-fede31ce9e6e"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement positionType="FixRelativeToBottom" x="103" y="157" width="340" height="1" uuid="fb8347d0-aff4-45bc-bff4-015b836143e9"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement positionType="FixRelativeToBottom" x="103" y="181" width="336" height="1" uuid="9c6ec201-3acc-4862-b3a2-2c2b67942e91"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<line direction="BottomUp">
+				<reportElement positionType="FixRelativeToBottom" x="99" y="209" width="340" height="1" uuid="eedc5736-010a-4f66-84bd-e5d44d84508f"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="163">
+			<textField isBlankWhenNull="true">
+				<reportElement x="175" y="104" width="200" height="36" uuid="bce87e1b-66c4-48da-86a7-5b8e5aaabc60"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Century Gothic" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{directorName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="175" y="141" width="200" height="20" uuid="ee7203ae-efce-4590-a4ef-915c5f278948"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{directorTittle}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="276" y="80" width="266" height="24" uuid="193b3575-93e3-4725-ad3a-88abff2dce0b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{labmanagerTittle}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="5" y="80" width="271" height="24" uuid="0d79f465-36ea-4ea1-954f-d59ab3491a50"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{analystTittle}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="276" y="43" width="268" height="37" uuid="143b1b1a-2f67-4217-b144-c4ece385ea77"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Century Gothic" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{labmanagerName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="4" y="41" width="272" height="39" uuid="378bc42c-ac8f-4659-8af9-f9c771ed7b1e"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Century Gothic" size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{analystName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="297" y="0" width="174" height="30" uuid="db451114-7ffb-44ce-9ca4-3df3887d3082"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="12"/>
+				</textElement>
+				<text><![CDATA[CONFIRMED/NOTED BY:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="1" width="150" height="30" uuid="9ff846e0-ded3-4792-9d37-cbc21aff8c48"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="12"/>
+				</textElement>
+				<text><![CDATA[CERTIFIED BY:]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="558" height="21" uuid="bddc3452-a18f-465f-8fb0-f2d45ce30a45"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="8"/>
+				</textElement>
+				<text><![CDATA[Address: Regional Goverment Center, Cotabato City, 9600, Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="22" width="280" height="38" uuid="b7620943-0664-4b91-9d25-ed046d3cb2d6"/>
+				<textElement>
+					<font fontName="Century Gothic" size="8"/>
+				</textElement>
+				<text><![CDATA[Tel. No. (63)(64) 421-6908
+Tel. No. (63)(64) 421-2711]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="22" width="278" height="38" uuid="0416689e-fb71-44c8-9229-c739a8f6335a"/>
+				<textElement>
+					<font fontName="Century Gothic" size="8"/>
+				</textElement>
+				<text><![CDATA[Email:zphrlaidan@dost.gov.ph
+URL: http://www.region12.dost.gov.ph]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

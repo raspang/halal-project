@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dc1d93e3-fb26-4c17-81ab-393d6f1576de">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="myname" class="java.lang.String"/>
+	<parameter name="nameOfEstablishment" class="java.lang.String"/>
+	<parameter name="owner" class="java.lang.String"/>
+	<parameter name="telNo" class="java.lang.String"/>
+	<parameter name="fax" class="java.lang.String"/>
+	<parameter name="personInvolved" class="java.lang.String"/>
+	<parameter name="position" class="java.lang.String"/>
+	<parameter name="email" class="java.lang.String"/>
+	<parameter name="website" class="java.lang.String"/>
+	<parameter name="reason" class="java.lang.String"/>
+	<parameter name="numOfEmployees" class="java.lang.String"/>
+	<parameter name="productionAreaSize" class="java.lang.String"/>
+	<parameter name="indoorArea" class="java.lang.String"/>
+	<parameter name="openArea" class="java.lang.String"/>
+	<parameter name="numOfRawMaterial" class="java.lang.String"/>
+	<parameter name="numProductsWarehouses" class="java.lang.String"/>
+	<parameter name="productionCapacity" class="java.lang.String"/>
+	<parameter name="productionLines" class="java.lang.String"/>
+	<parameter name="customProduction" class="java.lang.String"/>
+	<parameter name="productBrands" class="java.lang.String"/>
+	<parameter name="productNotHalal" class="java.lang.String"/>
+	<parameter name="namesOfRawMaterials" class="java.lang.String"/>
+	<parameter name="namesOfSuppliers" class="java.lang.String"/>
+	<parameter name="productsProcess" class="java.lang.String"/>
+	<parameter name="additionalActivities" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="3" width="380" height="17" uuid="63552052-c07c-430b-9cbd-11a3b4974d41"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="20" width="380" height="20" uuid="fe20989f-5c76-4f83-8414-db8e9cd43151"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT OF SCIENCE AND TECHNOLOGY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="40" width="380" height="22" uuid="f4736a71-ee4a-473b-ba9e-711dc098c633"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<text><![CDATA[Regional Office No. XII]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="10" width="553" height="50" uuid="a61c1532-06d6-4d6a-9aad-1036b96d4fbf"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOST XII CERTIFICATE OF HALAL QUALITY ASSURANCE APPLICATION FORM]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="0" width="555" height="30" backcolor="#FFFFFF" uuid="25d1c697-2c9a-44f0-b5c4-1693abd2a436">
+					<property name="net.sf.jasperreports.style.forecolor" value="#8F5E5D"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPANY PROFILE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="466" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="0" width="520" height="20" forecolor="#242020" uuid="de870d70-25fe-46ef-93b0-5bf4e6973123"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Name : " + String.valueOf(  $P{nameOfEstablishment})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="20" width="520" height="20" forecolor="#242020" uuid="d66cf272-53d5-41cf-a3d9-5a0b4a2f6d2b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Owner: "+String.valueOf( $P{owner})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="40" width="520" height="20" forecolor="#242020" uuid="3930290d-36b4-4dd4-9885-c1499ed0a8fc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Telephone: "+String.valueOf( $P{telNo})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="60" width="520" height="20" forecolor="#242020" uuid="f828bf7b-ec2d-4539-b2db-e9ce8019cc12"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Authorized Person: "+String.valueOf( $P{personInvolved})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="80" width="520" height="20" forecolor="#242020" uuid="e72b3d48-f9e9-419b-b4c5-63a36857aafd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Position : "+String.valueOf( $P{position})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="100" width="520" height="20" forecolor="#242020" uuid="68d8fcc1-b4eb-4002-b5f4-12bb33c00171"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Email : "+String.valueOf( $P{email})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="120" width="520" height="20" forecolor="#242020" uuid="1b9e1b0d-104a-4f68-b75e-16286d702a75"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Website: "+String.valueOf( $P{website})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="140" width="520" height="20" forecolor="#242020" uuid="1e24e950-1dec-4e20-a755-f4a2ab323528"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Reason: "+String.valueOf( $P{reason})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="160" width="520" height="20" forecolor="#242020" uuid="c520d108-58db-429d-9621-f9c125eb83ea"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Number of Employees: " +  String.valueOf( $P{numOfEmployees})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="180" width="520" height="20" forecolor="#242020" uuid="8b80c505-1059-450f-9e23-677be9a4d8ba"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Production Area Size: "+String.valueOf( $P{productionAreaSize})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="200" width="520" height="20" forecolor="#242020" uuid="01241e60-69b5-44a7-b3b3-9f9f0d65edbe"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Indoor Area: "+String.valueOf( $P{indoorArea})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="220" width="520" height="20" forecolor="#242020" uuid="7a62ccf0-431e-40fa-81d6-e5b9eeb7e4ec"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Open Area: "+String.valueOf( $P{openArea})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="240" width="520" height="20" forecolor="#242020" uuid="7476b8a9-41e3-45de-843c-61724fbd2fbf"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Number  Of Raw Material: "+String.valueOf( $P{numOfRawMaterial})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="260" width="520" height="20" forecolor="#242020" uuid="3fe73555-6602-4d40-a32e-6d8dec84a86b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Number Products in Warehouses: "+String.valueOf( $P{numProductsWarehouses})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="280" width="520" height="20" forecolor="#242020" uuid="d14b970f-b40c-4cb4-89e4-fc8190de52e8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Production Capacity: "+String.valueOf( $P{productionCapacity})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="300" width="520" height="20" forecolor="#242020" uuid="3c65fc6c-9d59-4bfe-a80a-c395302d8256"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Production Lines: "+String.valueOf( $P{productionLines})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="321" width="520" height="20" forecolor="#242020" uuid="37754291-8060-4efb-b73f-9a36ed8b0aef"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Custom Production: "+String.valueOf( $P{customProduction})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="342" width="520" height="20" forecolor="#242020" uuid="a1abc659-189e-4802-aeed-b1366f5761ec"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Product Brands: "+String.valueOf( $P{productBrands})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="363" width="520" height="20" forecolor="#242020" uuid="725d8b2e-3174-49a5-b4c7-ed018dbf136c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["State Products that will not be Halal Certified (If any): "+String.valueOf( $P{productNotHalal})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="20" y="384" width="520" height="20" forecolor="#242020" uuid="282c4461-f026-4174-8102-08a01f1f017c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Names Of Raw Materials: "+String.valueOf( $P{namesOfRawMaterials})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="405" width="520" height="20" forecolor="#242020" uuid="1283a7d9-6e9f-4984-adbf-076435dcb622"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Names Of Suppliers: "+String.valueOf( $P{namesOfSuppliers})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="426" width="520" height="20" forecolor="#242020" uuid="41fc64f5-48fc-4acd-8301-ff5a6cae1931"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Products Process: "+String.valueOf( $P{productsProcess})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement positionType="Float" x="20" y="446" width="520" height="20" forecolor="#242020" uuid="3366cf12-300d-4d03-bc97-c517f6a388b1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Additional Activities: "+String.valueOf( $P{additionalActivities})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="0" width="270" height="62" uuid="052815a4-afbb-4ca2-a220-7983d5634da2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[DOST 12 Bldg., Regional Government Center
+Cotabato City
+Philippines 9600]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="275" height="62" uuid="178c1880-813a-42a5-8c02-bdba060c8720"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Tel. No.: +63 64 421-6908
+Fax No.:+63 64 421-2711
+Email: zhrlaidan.r12@dost.gov.ph
+Website: region12.dost.gov.ph]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

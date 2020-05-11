@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="halalform" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="585c76c9-bf46-476e-b5f0-d34d8d1447b9">
+	<parameter name="dost" class="java.lang.Object"/>
+	<parameter name="halal" class="java.lang.Object"/>
+	<parameter name="directorName" class="java.lang.String"/>
+	<parameter name="directorTittle" class="java.lang.String"/>
+	<parameter name="labmanagerName" class="java.lang.String"/>
+	<parameter name="labmanagerTittle" class="java.lang.String"/>
+	<parameter name="analystName" class="java.lang.String"/>
+	<parameter name="analystTittle" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="laboratoryNo" class="java.lang.String"/>
+	<field name="dateSubmitted" class="java.lang.String"/>
+	<field name="dateAnalyzed" class="java.lang.String"/>
+	<field name="dateReported" class="java.lang.String"/>
+	<field name="sampleSubmittedBy" class="java.lang.String"/>
+	<field name="nameOfCompany" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="sampleCode" class="java.lang.String"/>
+	<field name="sampleDescription" class="java.lang.String"/>
+	<field name="testMethod" class="java.lang.String"/>
+	<field name="parameter" class="java.lang.String"/>
+	<field name="result" class="java.lang.String"/>
+	<field name="unit" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="307" splitType="Stretch">
+			<textField>
+				<reportElement x="140" y="120" width="418" height="20" uuid="48e3b9a6-8a1a-4939-93d2-21fceee36d2f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":  "+$F{laboratoryNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="140" width="418" height="20" uuid="5cf8b73f-45ce-482e-972d-910e239e29d1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":  "+$F{dateSubmitted}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="160" width="418" height="20" uuid="2a4e58f9-3ad6-4f56-a554-cc22be23e216"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":  "+$F{dateAnalyzed}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="180" width="418" height="20" uuid="fba61f14-300c-4baa-8f30-dccff4a197a0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":  "+$F{dateReported}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="200" width="418" height="20" uuid="fb4385d4-83a0-4747-b341-80af8fa4c10c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":  "+$F{sampleSubmittedBy}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="220" width="418" height="20" uuid="f31b71ca-b946-41b6-92ea-d1ca6dd9027b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":  "+$F{nameOfCompany}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="240" width="418" height="19" uuid="b5581893-1f27-4e31-b715-871e1aec1bf1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":  "+$F{address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="80" width="558" height="30" uuid="042114dd-10c6-4b32-8407-632c380666fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORT OF ANALYSIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="120" width="130" height="20" uuid="c077e51c-9255-4867-ad80-d9f49a889ddb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Laboratory No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="140" width="130" height="20" uuid="129504f6-0149-40e9-9cd9-6246b47a5664"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Date Submitted]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="160" width="130" height="20" uuid="d02242ae-f06c-4917-b608-3d3c9886c036"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Date Analyzed]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="180" width="130" height="20" uuid="73cd6b3c-486c-4fd8-8cb9-ce7b8763a8a3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Date Reported]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="200" width="130" height="20" uuid="bcf27cf5-ff24-444e-81d4-4d20c7c9ac75"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Sample Submitted by]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="220" width="130" height="20" uuid="c6f8a1b1-ce51-4b4a-849b-1f67b2de78d5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Name of Company	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="240" width="130" height="19" uuid="7d578478-2864-44b0-ba17-b865b91bf04d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="259" width="130" height="19" uuid="c5ee6858-52f4-4a4a-9a73-483fe641d151"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Page]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="140" y="259" width="418" height="19" uuid="f2482497-e23e-45ba-b8c8-ff02d9b8a651"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[":  "+$V{PAGE_NUMBER}+" of "+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="130" y="0" width="300" height="20" uuid="95a96b77-63bd-4043-aaa1-b6a05917d06f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="20" width="300" height="20" uuid="1e207e20-d1ed-49b9-a042-18a9d84466b9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT OF SCIENCE AND TECHNOLOGY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="130" y="40" width="300" height="20" uuid="5ff6fc23-9096-4a6e-ae19-ce022444027f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Regional Office No. XII, Cotabato City]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="60" width="400" height="20" uuid="c5f9adf9-0775-4cc5-bde1-c1c143ac08e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HALAL LABORATORY]]></text>
+			</staticText>
+			<image>
+				<reportElement x="70" y="0" width="50" height="50" uuid="7d7fe79e-3eb5-4f72-8103-e526f7f1f45b"/>
+				<imageExpression><![CDATA[$P{dost}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="420" y="0" width="70" height="70" uuid="f12e827d-aafd-41cf-b6d4-8f2338c949e9"/>
+				<imageExpression><![CDATA[$P{halal}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="15" splitType="Stretch">
+			<staticText>
+				<reportElement x="9" y="1" width="71" height="14" uuid="336c327b-021b-4de4-88a3-815707ad6266">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="03fb49a5-9e91-4a10-a93f-90117fe06895"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Sample Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="1" width="110" height="14" uuid="6d450cfe-cfb5-49f2-9fbf-84a1b7ec756c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cde9c7cd-50bd-4beb-a365-5d8ec0048633"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Sample Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="1" width="100" height="14" uuid="3b8d6ce9-c983-48f0-a16c-e4c957bb935e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="86b12dac-46d8-47cf-b11b-20472fc126d1"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Parameter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="1" width="76" height="14" uuid="1419d6cb-a2c9-403b-8b51-9ffbe5755cfc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="576e347b-a670-465d-9b96-439b2fede2a1"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Result]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="1" width="72" height="14" uuid="6a19fb55-512e-4ed9-be82-6aa3351c00e2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="36244949-3435-4e42-b5a7-7db07b126bf5"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Unit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="1" width="110" height="14" uuid="cf07f632-f473-421e-aa2f-2f363d011875">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ebea1d68-c913-40d0-a882-b90d0f11d30c"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<text><![CDATA[Test Method]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="9" y="0" width="71" height="30" uuid="9e3d525f-1cab-474d-83d1-875bf18ec67c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="03fb49a5-9e91-4a10-a93f-90117fe06895"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[String.valueOf($F{sampleCode})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="80" y="0" width="110" height="30" uuid="96f643ce-59b4-495b-a246-96e5977dcd3e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cde9c7cd-50bd-4beb-a365-5d8ec0048633"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[String.valueOf($F{sampleDescription})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="190" y="0" width="110" height="30" uuid="e062bd7a-485b-4604-93ab-4b1c852cd304">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ebea1d68-c913-40d0-a882-b90d0f11d30c"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{testMethod}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="300" y="0" width="100" height="30" uuid="801be77a-a0c2-4a07-b3fe-c5c995511506">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="86b12dac-46d8-47cf-b11b-20472fc126d1"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[String.valueOf($F{parameter})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="400" y="0" width="76" height="30" uuid="03fe3885-6141-4146-b65b-75c46c3328f3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="576e347b-a670-465d-9b96-439b2fede2a1"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[String.valueOf($F{result})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="476" y="0" width="72" height="30" uuid="c3cf395f-f381-4518-a531-99f5480ceffd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="36244949-3435-4e42-b5a7-7db07b126bf5"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[String.valueOf($F{unit})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="258">
+			<textField isBlankWhenNull="true">
+				<reportElement x="179" y="201" width="200" height="36" uuid="bce87e1b-66c4-48da-86a7-5b8e5aaabc60"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{directorName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="179" y="238" width="200" height="20" uuid="ee7203ae-efce-4590-a4ef-915c5f278948"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{directorTittle}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="280" y="177" width="266" height="24" uuid="193b3575-93e3-4725-ad3a-88abff2dce0b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{labmanagerTittle}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="9" y="177" width="271" height="24" uuid="0d79f465-36ea-4ea1-954f-d59ab3491a50"/>
+				<textElement textAlignment="Center">
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{analystTittle}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="280" y="140" width="268" height="37" uuid="143b1b1a-2f67-4217-b144-c4ece385ea77"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{labmanagerName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="8" y="138" width="272" height="39" uuid="378bc42c-ac8f-4659-8af9-f9c771ed7b1e"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Century Gothic" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{analystName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="9" y="0" width="539" height="138" uuid="e8e33d6a-1f8f-4877-ab13-c46307d6afd7"/>
+				<textElement>
+					<font fontName="Century Gothic"/>
+				</textElement>
+				<textFieldExpression><![CDATA["\nREMARKS:\n"+
+ "  •Sample was analyzed as received.\n"+
+"   •The results indicated in this report are those obtained at the time of test and refer only to the particular sample submitted.\n"+
+ "  •This report shall not be reproduced in part or in full without the written approval of this laboratory.\n"+
+ "  •The use of DOSTXII Halal seal is strictly prohibited unless permitted by DOSTXII.\n"+
+"\n"+
+ "-----------------------------------------------------------Nothing Follows--------------------------------------------------------\n"+
+"\n"+
+ "       ANALYZED BY:					CONFIRMED/NOTED BY:\n"+
+"\n\n\n"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="558" height="21" uuid="bddc3452-a18f-465f-8fb0-f2d45ce30a45"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Century Gothic" size="8"/>
+				</textElement>
+				<text><![CDATA[Address: Regional Goverment Center, Cotabato City, 9600, Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="22" width="280" height="38" uuid="b7620943-0664-4b91-9d25-ed046d3cb2d6"/>
+				<textElement>
+					<font fontName="Century Gothic" size="8"/>
+				</textElement>
+				<text><![CDATA[Tel. No. (63)(64) 421-6908
+Tel. No. (63)(64) 421-2711]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="22" width="278" height="38" uuid="0416689e-fb71-44c8-9229-c739a8f6335a"/>
+				<textElement>
+					<font fontName="Century Gothic" size="8"/>
+				</textElement>
+				<text><![CDATA[Email:zphrlaidan@dost.gov.ph
+URL: http://www.region12.dost.gov.ph]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

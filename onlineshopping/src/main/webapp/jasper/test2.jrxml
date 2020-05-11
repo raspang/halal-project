@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="test1" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dc1d93e3-fb26-4c17-81ab-393d6f1576de">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="myname" class="java.lang.String"/>
+	<parameter name="nameOfEstablishment" class="java.lang.String"/>
+	<parameter name="owner" class="java.lang.String"/>
+	<parameter name="telNo" class="java.lang.String"/>
+	<parameter name="fax" class="java.lang.String"/>
+	<parameter name="personInvolved" class="java.lang.String"/>
+	<parameter name="position" class="java.lang.String"/>
+	<parameter name="email" class="java.lang.String"/>
+	<parameter name="website" class="java.lang.String"/>
+	<parameter name="reason" class="java.lang.String"/>
+	<parameter name="numOfEmployees" class="java.lang.String"/>
+	<parameter name="productionAreaSize" class="java.lang.String"/>
+	<parameter name="indoorArea" class="java.lang.String"/>
+	<parameter name="openArea" class="java.lang.String"/>
+	<parameter name="numOfRawMaterial" class="java.lang.String"/>
+	<parameter name="numProductsWarehouses" class="java.lang.String"/>
+	<parameter name="productionCapacity" class="java.lang.String"/>
+	<parameter name="productionLines" class="java.lang.String"/>
+	<parameter name="customProduction" class="java.lang.String"/>
+	<parameter name="productBrands" class="java.lang.String"/>
+	<parameter name="productNotHalal" class="java.lang.String"/>
+	<parameter name="namesOfRawMaterials" class="java.lang.String"/>
+	<parameter name="namesOfSuppliers" class="java.lang.String"/>
+	<parameter name="productsProcess" class="java.lang.String"/>
+	<parameter name="additionalActivities" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="72" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="3" width="380" height="17" uuid="63552052-c07c-430b-9cbd-11a3b4974d41"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<text><![CDATA[Republic of the Philippines]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="20" width="380" height="25" uuid="fe20989f-5c76-4f83-8414-db8e9cd43151"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTMENT OF SCIENCE AND TECHNOLOGY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="50" width="380" height="22" uuid="f4736a71-ee4a-473b-ba9e-711dc098c633"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<text><![CDATA[Regional Office No. XII]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="10" width="553" height="50" uuid="a61c1532-06d6-4d6a-9aad-1036b96d4fbf"/>
+				<textElement textAlignment="Center">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOST XII CERTIFICATE OF HALAL QUALITY ASSURANCE APPLICATION FORM]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="-8" width="555" height="38" backcolor="#FFFFFF" uuid="25d1c697-2c9a-44f0-b5c4-1693abd2a436">
+					<property name="net.sf.jasperreports.style.forecolor" value="#8F5E5D"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPANY PROFILE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="180" splitType="Stretch">
+			<textField>
+				<reportElement positionType="Float" x="3" y="10" width="552" height="170" uuid="de870d70-25fe-46ef-93b0-5bf4e6973123"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Name : " +String.valueOf($P{nameOfEstablishment})+"\n"+"Telephone: "+String.valueOf( $P{telNo})+"\n"+"Authorized Person: "+String.valueOf( $P{personInvolved})+"\n"+"Position : "+String.valueOf( $P{position})+"\n"+"Email : "+String.valueOf($P{email})+"\n"+"Website: "+String.valueOf( $P{website})+"\n"+"Reason: "+String.valueOf($P{reason})+"\n"+"Number of Employees: " +  String.valueOf( $P{numOfEmployees})+"\n"+"Production Area Size: "+String.valueOf( $P{productionAreaSize})+"\n"+"Indoor Area: "+String.valueOf( $P{indoorArea})+"\n"+
+"Open Area: "+String.valueOf( $P{openArea})+"\n"+"Number  Of Raw Material: "+String.valueOf($P{numOfRawMaterial})+"\n"+"Number Products in Warehouses: "+String.valueOf($P{numProductsWarehouses})+"\n"+
+"Production Capacity: "+String.valueOf( $P{productionCapacity})+"\n"+"Production Lines: "+String.valueOf( $P{productionLines})+"\n"+"Custom Production: "+String.valueOf( $P{customProduction})+"\n"+
+"Product Brands: "+String.valueOf( $P{productBrands})+"\n"+"State Products that will not be Halal Certified (If any): "+String.valueOf( $P{productNotHalal})+"\n"+"Names Of Raw Materials: "+String.valueOf( $P{namesOfRawMaterials})+"\n"+"Names Of Suppliers: "+String.valueOf( $P{namesOfSuppliers})+"\n"+"Products Process: "+String.valueOf( $P{productsProcess})+"\n"+"Additional Activities: "+String.valueOf( $P{additionalActivities})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="92" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="0" width="278" height="92" uuid="052815a4-afbb-4ca2-a220-7983d5634da2"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[DOST 12 Bldg., Regional Government Center
+Cotabato City
+Philippines 9600]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="275" height="92" uuid="178c1880-813a-42a5-8c02-bdba060c8720"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="false" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Tel. No.: +63 64 421-6908
+Fax No.:+63 64 421-2711
+Email: zhrlaidan.r12@dost.gov.ph
+Website: region12.dost.gov.ph]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
