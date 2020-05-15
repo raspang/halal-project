@@ -14,7 +14,7 @@
 		<javaee.version>7.0</javaee.version>
 		<spring.version>4.3.6.RELEASE</spring.version>
 		<spring.security.version>4.2.2.RELEASE</spring.security.version>
-		<jackson.version>2.6.0</jackson.version>
+		<jackson.version>2.11.0</jackson.version>
 	</properties>
 
 	<dependencies>
